@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Character counter</title>
+</head>
+<body>
+  <nav class="navbar">
+  <a href="#" class="navbar__logo"><img src="./assets/images/logo-dark-theme.svg" alt=""></a>
+  <div class="settings-container">
+    <a href="#" data-theme-toggle ><img src="./assets/images/icon-sun.svg" alt=""></a>
+  </div>
+  </nav>
+  <main>
+  <div class="title-container">
+    <h1 class="title">Analyze your text in real-time.</h1>
+  </div>
+  <div class="content-container">
+    <div class="input-container">
+      <textarea class="input text-style-3" id="input"  placeholder="Start typing here… (or paste your text)"></textarea>
+    </div>
+    <div class="options-container">
+        <form action="">
+          <div class="checkbox" >
+        <div class="option">
+          <input type="checkbox" name="exclude-spaces" id="exclude-spaces">
+          <label for="exclude-spaces">Exclude Spaces</label>
+        </div>
+        <div class="option">
+          <input type="checkbox" name="char-limit" id="char-limit">
+          <label for="char-limit">Set Character Limit</label>
+        </div>
+      </div>
+        </form>
+      <p>Approx. reading time: <span id="reading-time">0</span> minutes</p>
+    </div>
+  </div>
+  <div class="stats-density-container">
+    <div class="stats-parent-container">
+      <div class="stats-container characters-stats">
+        <h2 class="stat-value" id="letter-count">00</h2>
+        <h3 class="stat-title">Total Characters</h3>
+      </div>
+      <div class="stats-container word-stats">
+        <h2 class="stat-value" id="word-count">00</h2>
+        <h3 class="stat-title" >Word Count</h3>
+      </div>
+      <div class="stats-container sentence-stats">
+        <h2 class="stat-value" id="sentence-count">00</h2>
+        <h3 class="stat-title">Sentence Count</h3>
+      </div>
+    </div>
+    <div class="letter-density-container">
+      <h2>Letter Density</h2>
+      <div id="letterContainer"></div>  
+      
+
+    </div>
+  </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
